@@ -33,8 +33,8 @@ const Navbar: React.FC = () => {
             left: 0,
             right: 0,
             zIndex: 50,
-            background: scrolled ? 'rgba(10, 10, 10, 0.95)' : 'transparent',
-            backdropFilter: scrolled ? 'blur(10px)' : 'none',
+            background: scrolled || isMenuOpen ? 'rgba(10, 10, 10, 0.95)' : 'transparent',
+            backdropFilter: scrolled || isMenuOpen ? 'blur(10px)' : 'none',
             borderBottom: scrolled ? '1px solid var(--border)' : 'none',
             transition: 'all 0.3s ease'
         }}>
@@ -102,8 +102,11 @@ const Navbar: React.FC = () => {
                         flexDirection: 'column',
                         gap: '16px',
                         paddingTop: '24px',
+                        paddingBottom: '24px',
                         borderTop: '1px solid var(--border)',
-                        marginTop: '16px'
+                        marginTop: '16px',
+                        height: '100vh', // Cover full screen
+                        background: 'rgba(10, 10, 10, 0.95)'
                     }} className="mobile-menu">
                         {navLinks.map((link) => (
                             <Link
