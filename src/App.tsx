@@ -77,27 +77,7 @@ const Footer: React.FC = () => (
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div>
-          <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '20px' }}>Platform</h4>
-          <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            {[
-              { name: 'Services', href: '/services' },
-              { name: 'Training', href: '/training' },
-              { name: 'Freelancing', href: '/freelancing' },
-              { name: 'Portfolio', href: '/portfolio' }
-            ].map((link, i) => (
-              <li key={i}>
-                <a href={link.href} style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
-                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-secondary)'}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+
 
         {/* Contact Info */}
         <div>
