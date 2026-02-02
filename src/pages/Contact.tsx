@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                     from_email: formData.email,
                     interest: formData.interest,
                     message: formData.message,
-                    to_email: 'sagarsaikolla@gmail.com' // Your receiving email
+                    to_email: 'sagar@aaryanmedia.com' // Your receiving email
                 },
                 publicKey
             );
@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
                         {/* Contact Cards */}
                         <div style={{ display: 'grid', gap: '16px' }}>
                             {[
-                                { icon: <Mail className="text-primary" size={20} />, label: 'Email', value: 'sagarsaikolla@gmail.com', link: 'mailto:sagarsaikolla@gmail.com' },
+                                { icon: <Mail className="text-primary" size={20} />, label: 'Email', value: 'sagar@aaryanmedia.com', link: 'mailto:sagar@aaryanmedia.com' },
                                 { icon: <Phone className="text-primary" size={20} />, label: 'Phone', value: '+91 7286042944', link: 'tel:+917286042944' },
                                 { icon: <MapPin className="text-primary" size={20} />, label: 'Location', value: 'Ameerpet, Hyderabad', link: 'https://maps.app.goo.gl/1U67dznTDWv5qA126' }
                             ].map((item, i) => (

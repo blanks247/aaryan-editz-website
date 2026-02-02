@@ -1,28 +1,13 @@
 import React from 'react';
-import { CheckCircle, Award, Users, Briefcase, ArrowRight } from 'lucide-react';
+import { Check, CheckCircle, Award, Users, Briefcase, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Training: React.FC = () => {
-    const courses = [
-        {
-            title: "Adobe Premiere Pro Mastery",
-            duration: "8 Weeks",
-            level: "Beginner to Pro",
-            modules: ["Interface & Workspace", "Advanced Cutting Techniques", "Color Grading Mastery", "Audio Engineering", "Export Optimization"]
-        },
-        {
-            title: "After Effects & Motion Graphics",
-            duration: "10 Weeks",
-            level: "Intermediate",
-            modules: ["Core Fundamentals", "Typography Animation", "Advanced Compositing", "3D Camera Tracking", "Plugin Ecosystem"]
-        }
-    ];
-
     return (
         <div style={{ paddingTop: '120px', paddingBottom: '80px' }}>
             <div className="container">
                 {/* Header */}
-                <div style={{ maxWidth: '700px', margin: '0 auto 64px', textAlign: 'center' }}>
+                <div style={{ maxWidth: '800px', margin: '0 auto 64px', textAlign: 'center' }}>
                     <div style={{
                         display: 'inline-flex',
                         alignItems: 'center',
@@ -37,13 +22,113 @@ const Training: React.FC = () => {
                         color: '#818cf8'
                     }}>
                         <Award size={14} />
-                        Industry-Certified Training
+                        Professional Certification
                     </div>
 
-                    <h1 className="section-title">Professional Video Editing Training</h1>
-                    <p style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                        Learn from industry experts and start your freelance career with guaranteed project placements
+                    <h1 className="section-title">Video Editing <span className="gradient-text">Training</span></h1>
+                    <p style={{ fontSize: '1.25rem', color: 'var(--text-secondary)', lineHeight: '1.6', maxWidth: '600px', margin: '0 auto' }}>
+                        Master industry-standard tools and techniques. From zero to professional video editor in months.
                     </p>
+                </div>
+
+                {/* Courses Grid */}
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                    gap: '32px',
+                    maxWidth: '1000px',
+                    margin: '0 auto 80px'
+                }}>
+                    {/* Short Term Course */}
+                    <div className="glass-card" style={{ padding: '40px', borderRadius: '24px', position: 'relative', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ marginBottom: '32px' }}>
+                            <span style={{
+                                display: 'inline-block',
+                                padding: '8px 16px',
+                                background: 'rgba(255, 255, 255, 0.05)',
+                                color: 'var(--text-primary)',
+                                borderRadius: '100px',
+                                fontSize: '0.875rem',
+                                fontWeight: '600',
+                                marginBottom: '24px'
+                            }}>
+                                2 Months Duration
+                            </span>
+                            <h3 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '16px' }}>Short-Term Course</h3>
+                            <div style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '8px', color: 'white' }}>
+                                ₹30,000
+                            </div>
+                            <p style={{ color: 'var(--text-secondary)' }}>Perfect for quick learning and immediate start.</p>
+                        </div>
+
+                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px', flex: 1 }}>
+                            {[
+                                'Master Premiere Pro & After Effects',
+                                'Focus on Video Editing & Motion Graphics',
+                                '100% Job Guarantee',
+                                'OR Freelancing Career Training',
+                            ].map((item, i) => (
+                                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1rem', color: 'var(--text-primary)' }}>
+                                    <div style={{ width: '24px', height: '24px', background: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                                        <Check size={14} color="white" />
+                                    </div>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                            Enroll Now
+                        </Link>
+                    </div>
+
+                    {/* Long Term Course */}
+                    <div className="glass-card" style={{ padding: '40px', borderRadius: '24px', position: 'relative', border: '1px solid var(--primary)', background: 'linear-gradient(145deg, rgba(99, 102, 241, 0.1) 0%, rgba(10, 10, 10, 0.4) 100%)', display: 'flex', flexDirection: 'column' }}>
+                        <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--primary)', padding: '4px 16px', borderRadius: '100px', fontSize: '0.875rem', fontWeight: '700', color: 'white' }}>
+                            RECOMMENDED
+                        </div>
+                        <div style={{ marginBottom: '32px' }}>
+                            <span style={{
+                                display: 'inline-block',
+                                padding: '8px 16px',
+                                background: 'rgba(99, 102, 241, 0.2)',
+                                color: 'var(--primary)',
+                                borderRadius: '100px',
+                                fontSize: '0.875rem',
+                                fontWeight: '600',
+                                marginBottom: '24px'
+                            }}>
+                                5 Months Duration
+                            </span>
+                            <h3 style={{ fontSize: '2rem', fontWeight: '700', marginBottom: '16px' }}>Long-Term Course</h3>
+                            <div style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '8px', color: 'white' }}>
+                                ₹50,000
+                            </div>
+                            <p style={{ color: 'var(--text-secondary)' }}>Complete career transformation package.</p>
+                        </div>
+
+                        <ul style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '40px', flex: 1 }}>
+                            {[
+                                'Everything in Short-Term Course',
+                                'Extended Internship Program',
+                                'Advanced Freelancing Training',
+                                'Real-time Project Experience',
+                                'Portfolio Building',
+                                'Guaranteed Job Placement'
+                            ].map((item, i) => (
+                                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1rem', color: 'var(--text-primary)' }}>
+                                    <div style={{ width: '24px', height: '24px', background: 'var(--primary)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                                        <Check size={14} color="white" />
+                                    </div>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+
+                        <Link to="/contact" className="btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
+                            Enroll Now
+                        </Link>
+                    </div>
                 </div>
 
                 {/* Benefits */}
@@ -51,7 +136,8 @@ const Training: React.FC = () => {
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
                     gap: '20px',
-                    marginBottom: '64px'
+                    maxWidth: '1000px',
+                    margin: '0 auto'
                 }}>
                     {[
                         { icon: <Award />, title: "Certified Training", desc: "Industry-recognized certificates" },
@@ -80,67 +166,6 @@ const Training: React.FC = () => {
                             <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>{item.desc}</p>
                         </div>
                     ))}
-                </div>
-
-                {/* Courses */}
-                <div style={{ maxWidth: '900px', margin: '0 auto 64px' }}>
-                    <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '32px', textAlign: 'center' }}>
-                        Our <span className="gradient-text">Training Programs</span>
-                    </h2>
-
-                    <div style={{ display: 'grid', gap: '32px' }}>
-                        {courses.map((course, i) => (
-                            <div key={i} className="glass" style={{
-                                padding: '32px',
-                                borderRadius: '16px',
-                                border: '1px solid rgba(99, 102, 241, 0.15)'
-                            }}>
-                                <div style={{ marginBottom: '24px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', flexWrap: 'wrap', gap: '16px', marginBottom: '12px' }}>
-                                        <h3 style={{ fontSize: '1.5rem', fontWeight: '700' }}>{course.title}</h3>
-                                        <div style={{ textAlign: 'right' }}>
-                                            <div style={{ fontSize: '0.75rem', color: 'var(--primary)', fontWeight: '600', marginBottom: '4px' }}>{course.level}</div>
-                                            <div style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>{course.duration}</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div style={{ display: 'grid', gap: '12px', marginBottom: '24px' }}>
-                                    {course.modules.map((module, mi) => (
-                                        <div key={mi} style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                                            <CheckCircle size={18} style={{ color: 'var(--primary)', flexShrink: 0 }} />
-                                            <span style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)' }}>{module}</span>
-                                        </div>
-                                    ))}
-                                </div>
-
-                                <Link to="/contact" className="btn-primary">
-                                    Download Curriculum <ArrowRight size={18} />
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* CTA */}
-                <div className="glass" style={{
-                    maxWidth: '700px',
-                    margin: '0 auto',
-                    padding: '48px 32px',
-                    borderRadius: '20px',
-                    textAlign: 'center',
-                    border: '1px solid rgba(99, 102, 241, 0.2)',
-                    background: 'rgba(99, 102, 241, 0.05)'
-                }}>
-                    <h3 style={{ fontSize: '1.875rem', fontWeight: '700', marginBottom: '16px' }}>
-                        Ready to Start?
-                    </h3>
-                    <p style={{ fontSize: '1.0625rem', color: 'var(--text-secondary)', marginBottom: '32px', lineHeight: '1.6' }}>
-                        Join the next batch and begin your journey to becoming a professional video editor
-                    </p>
-                    <Link to="/contact" className="btn-primary" style={{ padding: '14px 32px' }}>
-                        Enroll Now
-                    </Link>
                 </div>
             </div>
         </div>

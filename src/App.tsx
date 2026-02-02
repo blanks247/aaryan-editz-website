@@ -83,7 +83,7 @@ const Footer: React.FC = () => (
         <div>
           <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '20px' }}>Contact</h4>
           <ul style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '0.9375rem', color: 'var(--text-secondary)' }}>
-            <li>sagarsaikolla@gmail.com</li>
+            <li>sagar@aaryanmedia.com</li>
             <li>+91 7286042944</li>
             <li>Ameerpet, Hyderabad</li>
           </ul>
