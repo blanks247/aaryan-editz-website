@@ -7,7 +7,7 @@ import Training from './pages/Training';
 import Freelancing from './pages/Freelancing';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import { Instagram, Youtube, Facebook } from 'lucide-react';
+import { Instagram, Youtube, Linkedin } from 'lucide-react';
 import logoImg from './assets/logo.jpeg';
 
 // Scroll to top helper
@@ -54,10 +54,16 @@ const Footer: React.FC = () => (
             Empowering the next generation of visual storytellers with industry-level skills and real opportunities.
           </p>
           <div style={{ display: 'flex', gap: '12px' }}>
-            {[Instagram, Youtube, Facebook].map((Icon, i) => (
+            {[
+              { Icon: Instagram, href: 'https://www.instagram.com/sagarsai.kolla?igsh=MWQ4MzFhaWRqN2llMw==' },
+              { Icon: Youtube, href: 'https://youtube.com/@sagarsaikolla?si=IqYTr8QFfT0Nzpno' },
+              { Icon: Linkedin, href: 'https://www.linkedin.com/in/sagar-sai-kolla-132162349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' }
+            ].map(({ Icon, href }, i) => (
               <a
                 key={i}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   width: '40px',
                   height: '40px',
