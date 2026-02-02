@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, CheckCircle, Award, Users, Briefcase, ArrowRight } from 'lucide-react';
+import { Check, Award, Users, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Training: React.FC = () => {
