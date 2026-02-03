@@ -181,7 +181,7 @@ const Home: React.FC = () => {
             <section style={{ paddingTop: '80px', paddingBottom: '80px' }}>
                 <div className="container">
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <h2 className="section-title" style={{ marginBottom: '48px' }}>Why Choose Aaryan Editz</h2>
+                        <h2 className="section-title" style={{ marginBottom: '48px' }}>Why Choose Aaryan Media</h2>
 
                         <div style={{ display: 'grid', gap: '24px' }}>
                             {[

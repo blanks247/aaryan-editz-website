@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
                     <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                         <img
                             src={logoImg}
-                            alt="Aaryan Editz Logo"
+                            alt="Aaryan Media Logo"
                             style={{
                                 width: '40px',
                                 height: '40px',
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                             }}
                         />
                         <span style={{ fontSize: '1.25rem', fontWeight: '800', letterSpacing: '-0.01em' }}>
-                            AARYAN EDITZ
+                            AARYAN MEDIA
                         </span>
                     </Link>
 

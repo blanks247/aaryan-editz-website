@@ -38,7 +38,7 @@ const Footer: React.FC = () => (
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
             <img
               src={logoImg}
-              alt="Aaryan Editz Logo"
+              alt="Aaryan Media Logo"
               style={{
                 width: '40px',
                 height: '40px',
@@ -47,7 +47,7 @@ const Footer: React.FC = () => (
               }}
             />
             <span style={{ fontSize: '1.25rem', fontWeight: '800', letterSpacing: '-0.01em' }}>
-              AARYAN EDITZ
+              AARYAN MEDIA
             </span>
           </div>
           <p style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
@@ -107,7 +107,7 @@ const Footer: React.FC = () => (
         textAlign: 'center'
       }}>
         <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
-          © 2025 Aaryan Editz. All rights reserved.
+          © 2025 Aaryan Media. All rights reserved.
         </p>
         <div style={{ display: 'flex', gap: '24px', fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
           <a href="#" style={{ transition: 'color 0.2s' }}

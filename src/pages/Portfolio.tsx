@@ -94,7 +94,7 @@ const Portfolio: React.FC = () => {
                     background: 'rgba(99, 102, 241, 0.05)'
                 }}>
                     <div style={{ fontSize: '1.25rem', fontWeight: '600', lineHeight: '1.6', marginBottom: '24px', fontStyle: 'italic' }}>
-                        "Aaryan Editz transformed our wedding footage into something we'll cherish forever. Truly exceptional quality and professionalism."
+                        "Aaryan Media transformed our wedding footage into something we'll cherish forever. Truly exceptional quality and professionalism."
                     </div>
                     <div style={{ fontSize: '0.9375rem', fontWeight: '600', color: 'var(--primary)' }}>
                         — Priya & Rahul, Mumbai

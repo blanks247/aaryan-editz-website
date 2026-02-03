@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
 
     // WhatsApp number (format: country code + number without + or spaces)
     const whatsappNumber = '917286042944'; // Company WhatsApp number
-    const whatsappMessage = encodeURIComponent('Hello Aaryan Editz! I would like to inquire about your services.');
+    const whatsappMessage = encodeURIComponent('Hello Aaryan Media! I would like to inquire about your services.');
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
     return (
