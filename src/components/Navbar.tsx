@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         { name: 'Services', href: '/services' },
         { name: 'Training', href: '/training' },
         { name: 'Portfolio', href: '/portfolio' },
-        { name: 'Contact', href: '/contact' },
+        // { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                             </Link>
                         ))}
                         <Link to="/contact" className="btn-primary" style={{ padding: '0.625rem 1.5rem', fontSize: '0.9375rem' }}>
-                            Get Started
+                            Contact Us
                         </Link>
                     </div>
 
