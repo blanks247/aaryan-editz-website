@@ -42,8 +42,8 @@ const Home: React.FC = () => {
                                 marginBottom: '24px',
                                 letterSpacing: '-0.02em'
                             }}>
-                                Master Video Editing &<br />
-                                <span className="gradient-text">Launch Your Career</span>
+                                Growth that sells.<br />
+                                <span className="gradient-text">Performance that scales</span>
                             </h1>
 
                             <p style={{
