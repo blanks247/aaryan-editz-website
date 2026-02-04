@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, ArrowRight, CheckCircle, Video, Users, Award } from 'lucide-react';
+import { Play, ArrowRight, Video, Users, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import heroImg from '../assets/hero.png';
 import weddingImg from '../assets/wedding.png';
@@ -177,67 +177,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            {/* Why Choose Us */}
-            <section style={{ paddingTop: '80px', paddingBottom: '80px' }}>
-                <div className="container">
-                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                        <h2 className="section-title" style={{ marginBottom: '48px' }}>Why Choose Aaryan Media</h2>
 
-                        <div style={{ display: 'grid', gap: '24px' }}>
-                            {[
-                                { title: 'Industry Expert Instructors', desc: 'Learn from professionals with 10+ years of experience' },
-                                { title: '100% Job Guarantee', desc: 'Get placed in real projects immediately after training' },
-                                { title: 'Lifetime Support', desc: 'Access to our community and mentorship forever' },
-                                { title: 'Learn by Doing', desc: 'Work on real client projects during your training' }
-                            ].map((item, i) => (
-                                <div key={i} className="glass" style={{
-                                    padding: '24px',
-                                    borderRadius: '12px',
-                                    display: 'flex',
-                                    gap: '16px',
-                                    alignItems: 'start'
-                                }}>
-                                    <CheckCircle size={24} style={{ color: 'var(--primary)', flexShrink: 0, marginTop: '2px' }} />
-                                    <div>
-                                        <h4 style={{ fontSize: '1.125rem', fontWeight: '600', marginBottom: '8px' }}>{item.title}</h4>
-                                        <p style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem', lineHeight: '1.6' }}>{item.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section style={{ paddingTop: '80px', paddingBottom: '80px', background: 'var(--bg-secondary)' }}>
-                <div className="container">
-                    <div className="glass" style={{
-                        padding: 'clamp(2rem, 5vw, 4rem)',
-                        borderRadius: '24px',
-                        textAlign: 'center',
-                        maxWidth: '800px',
-                        margin: '0 auto',
-                        border: '1px solid rgba(99, 102, 241, 0.2)',
-                        background: 'rgba(99, 102, 241, 0.05)'
-                    }}>
-                        <h2 style={{ fontSize: 'clamp(1.875rem, 4vw, 3rem)', fontWeight: '800', marginBottom: '16px' }}>
-                            Ready to Start Your Journey?
-                        </h2>
-                        <p style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px' }}>
-                            Join hundreds of successful students who transformed their passion into a profitable career
-                        </p>
-                        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link to="/contact" className="btn-primary" style={{ padding: '1rem 2.5rem' }}>
-                                Book Free Consultation
-                            </Link>
-                            <Link to="/portfolio" className="btn-outline" style={{ padding: '1rem 2.5rem' }}>
-                                View Our Work
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
     );
 };
