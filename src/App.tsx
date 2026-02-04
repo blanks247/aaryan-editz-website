@@ -51,7 +51,7 @@ const Footer: React.FC = () => (
             </span>
           </div>
           <p style={{ fontSize: '0.9375rem', color: 'var(--text-secondary)', marginBottom: '24px', lineHeight: '1.6' }}>
-            Empowering the next generation of visual storytellers with industry-level skills and real opportunities.
+            Need result-focused digital marketing services? Let's talk growth, perfromance and scale.
           </p>
           <div style={{ display: 'flex', gap: '12px' }}>
             {[

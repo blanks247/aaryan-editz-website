@@ -203,178 +203,181 @@ const Services: React.FC = () => {
                 <AnimatePresence>
                     {selectedService && (
                         <>
-                            {/* Backdrop */}
+                            {/* Modal Overlay Container */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                onClick={() => setSelectedService(null)}
                                 style={{
                                     position: 'fixed',
                                     top: 0,
                                     left: 0,
                                     right: 0,
                                     bottom: 0,
-                                    background: 'rgba(0,0,0,0.8)',
-                                    backdropFilter: 'blur(8px)',
-                                    zIndex: 100
-                                }}
-                            />
-
-                            {/* Modal Content */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                                animate={{ opacity: 1, scale: 1, y: 0 }}
-                                exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                                style={{
-                                    position: 'fixed',
-                                    top: '50%',
-                                    left: '50%',
-                                    transform: 'translate(-50%, -50%)',
-                                    width: '90%',
-                                    maxWidth: '800px',
-                                    maxHeight: '90vh',
-                                    background: 'var(--bg-secondary)',
-                                    border: '1px solid var(--border)',
-                                    borderRadius: '24px',
-                                    zIndex: 101,
-                                    overflow: 'hidden',
+                                    zIndex: 100,
                                     display: 'flex',
-                                    flexDirection: 'column',
-                                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    padding: '20px'
                                 }}
                             >
-                                {/* Header */}
-                                <div style={{
-                                    padding: '32px',
-                                    borderBottom: '1px solid var(--border)',
-                                    display: 'flex',
-                                    justifyContent: 'space-between',
-                                    alignItems: 'flex-start',
-                                    background: 'var(--bg-primary)'
-                                }}>
-                                    <div style={{ paddingRight: '40px' }}>
-                                        <div style={{
-                                            display: 'inline-flex',
-                                            alignItems: 'center',
-                                            gap: '8px',
-                                            color: 'var(--primary)',
-                                            fontWeight: '600',
-                                            marginBottom: '8px',
-                                            fontSize: '0.9rem',
-                                            textTransform: 'uppercase',
-                                            letterSpacing: '0.05em'
-                                        }}>
-                                            {selectedService.icon} Service Detail
-                                        </div>
-                                        <h2 style={{ fontSize: '2rem', fontWeight: '800', lineHeight: '1.2' }}>
-                                            {selectedService.title}
-                                        </h2>
-                                    </div>
-                                    <button
-                                        onClick={() => setSelectedService(null)}
-                                        style={{
-                                            background: 'rgba(255,255,255,0.05)',
-                                            border: 'none',
-                                            width: '36px',
-                                            height: '36px',
-                                            borderRadius: '50%',
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            cursor: 'pointer',
-                                            color: 'var(--text-secondary)',
-                                            transition: 'all 0.2s'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
-                                            e.currentTarget.style.color = '#ef4444';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                                            e.currentTarget.style.color = 'var(--text-secondary)';
-                                        }}
-                                    >
-                                        <X size={20} />
-                                    </button>
-                                </div>
+                                {/* Backdrop */}
+                                <div
+                                    style={{
+                                        position: 'absolute',
+                                        inset: 0,
+                                        background: 'rgba(0,0,0,0.8)',
+                                        backdropFilter: 'blur(8px)'
+                                    }}
+                                    onClick={() => setSelectedService(null)}
+                                />
 
-                                {/* Body */}
-                                <div style={{
-                                    padding: '32px',
-                                    overflowY: 'auto',
-                                    flex: 1
-                                }}>
-                                    <p style={{
-                                        fontSize: '1.125rem',
-                                        color: 'var(--text-secondary)',
-                                        lineHeight: '1.7',
-                                        marginBottom: '40px'
-                                    }}>
-                                        {selectedService.fullDescription}
-                                    </p>
-
+                                {/* Modal Content */}
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                                    style={{
+                                        position: 'relative',
+                                        width: '100%',
+                                        maxWidth: '800px',
+                                        maxHeight: '90vh',
+                                        background: 'var(--bg-secondary)',
+                                        border: '1px solid var(--border)',
+                                        borderRadius: '24px',
+                                        zIndex: 101,
+                                        overflow: 'hidden',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
+                                    }}
+                                >
+                                    {/* Header */}
                                     <div style={{
-                                        display: 'grid',
-                                        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                                        gap: '24px',
-                                        marginBottom: '40px'
-                                    }}>
-                                        {selectedService.features.map((feature, idx) => (
-                                            <div key={idx} style={{
-                                                background: 'rgba(255,255,255,0.03)',
-                                                padding: '24px',
-                                                borderRadius: '16px',
-                                                border: '1px solid rgba(255,255,255,0.05)'
-                                            }}>
-                                                <h4 style={{
-                                                    fontSize: '1.125rem',
-                                                    fontWeight: '700',
-                                                    marginBottom: '8px',
-                                                    color: 'white'
-                                                }}>
-                                                    {feature.title}
-                                                </h4>
-                                                <p style={{
-                                                    fontSize: '0.9375rem',
-                                                    color: 'var(--text-secondary)',
-                                                    lineHeight: '1.6'
-                                                }}>
-                                                    {feature.description}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <div style={{
-                                        padding: '24px',
-                                        background: 'linear-gradient(90deg, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%)',
-                                        borderRadius: '16px',
-                                        border: '1px solid rgba(99, 102, 241, 0.2)',
+                                        padding: '32px',
+                                        borderBottom: '1px solid var(--border)',
                                         display: 'flex',
                                         justifyContent: 'space-between',
-                                        alignItems: 'center',
-                                        flexWrap: 'wrap',
-                                        gap: '16px'
+                                        alignItems: 'flex-start',
+                                        background: 'var(--bg-primary)',
+                                        flexShrink: 0
                                     }}>
-                                        <div>
-                                            <div style={{ fontWeight: '700', fontSize: '1.125rem', marginBottom: '4px' }}>
-                                                Ready to get started?
+                                        <div style={{ paddingRight: '40px' }}>
+                                            <div style={{
+                                                display: 'inline-flex',
+                                                alignItems: 'center',
+                                                gap: '8px',
+                                                color: 'var(--primary)',
+                                                fontWeight: '600',
+                                                marginBottom: '8px',
+                                                fontSize: '0.9rem',
+                                                textTransform: 'uppercase',
+                                                letterSpacing: '0.05em'
+                                            }}>
+                                                {selectedService.icon} Service Detail
                                             </div>
-                                            <div style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem' }}>
-                                                Transform your business with our {selectedService.title} strategies.
-                                            </div>
+                                            <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)', fontWeight: '800', lineHeight: '1.2' }}>
+                                                {selectedService.title}
+                                            </h2>
                                         </div>
-                                        <Link
-                                            to={selectedService.ctaLink}
-                                            className="btn-primary"
+                                        <button
                                             onClick={() => setSelectedService(null)}
+                                            style={{
+                                                background: 'rgba(255,255,255,0.05)',
+                                                border: 'none',
+                                                width: '36px',
+                                                height: '36px',
+                                                borderRadius: '50%',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                cursor: 'pointer',
+                                                color: 'var(--text-secondary)',
+                                                transition: 'all 0.2s'
+                                            }}
                                         >
-                                            {selectedService.cta} <ArrowRight size={18} />
-                                        </Link>
+                                            <X size={20} />
+                                        </button>
                                     </div>
-                                </div>
+
+                                    {/* Body */}
+                                    <div style={{
+                                        padding: '32px',
+                                        overflowY: 'auto',
+                                        flex: 1
+                                    }}>
+                                        <p style={{
+                                            fontSize: '1.125rem',
+                                            color: 'var(--text-secondary)',
+                                            lineHeight: '1.7',
+                                            marginBottom: '40px'
+                                        }}>
+                                            {selectedService.fullDescription}
+                                        </p>
+
+                                        <div style={{
+                                            display: 'grid',
+                                            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                                            gap: '24px',
+                                            marginBottom: '40px'
+                                        }}>
+                                            {selectedService.features.map((feature, idx) => (
+                                                <div key={idx} style={{
+                                                    background: 'rgba(255,255,255,0.03)',
+                                                    padding: '24px',
+                                                    borderRadius: '16px',
+                                                    border: '1px solid rgba(255,255,255,0.05)'
+                                                }}>
+                                                    <h4 style={{
+                                                        fontSize: '1.125rem',
+                                                        fontWeight: '700',
+                                                        marginBottom: '8px',
+                                                        color: 'white'
+                                                    }}>
+                                                        {feature.title}
+                                                    </h4>
+                                                    <p style={{
+                                                        fontSize: '0.9375rem',
+                                                        color: 'var(--text-secondary)',
+                                                        lineHeight: '1.6'
+                                                    }}>
+                                                        {feature.description}
+                                                    </p>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div style={{
+                                            padding: '24px',
+                                            background: 'linear-gradient(90deg, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%)',
+                                            borderRadius: '16px',
+                                            border: '1px solid rgba(99, 102, 241, 0.2)',
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                            flexWrap: 'wrap',
+                                            gap: '16px'
+                                        }}>
+                                            <div>
+                                                <div style={{ fontWeight: '700', fontSize: '1.125rem', marginBottom: '4px' }}>
+                                                    Ready to get started?
+                                                </div>
+                                                <div style={{ color: 'var(--text-secondary)', fontSize: '0.9375rem' }}>
+                                                    Transform your business with our {selectedService.title} strategies.
+                                                </div>
+                                            </div>
+                                            <Link
+                                                to={selectedService.ctaLink}
+                                                className="btn-primary"
+                                                onClick={() => setSelectedService(null)}
+                                            >
+                                                {selectedService.cta} <ArrowRight size={18} />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </motion.div>
                             </motion.div>
+
                         </>
                     )}
                 </AnimatePresence>

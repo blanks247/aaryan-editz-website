@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                 <div style={{ maxWidth: '700px', margin: '0 auto 64px', textAlign: 'center' }}>
                     <h1 className="section-title">Get In Touch</h1>
                     <p style={{ fontSize: '1.125rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-                        Ready to start your editing journey or need professional services? We're here to help.
+                        Ready to grow you business with digital marketing or need performance-driven solutions? We're here to help.
                     </p>
                 </div>
 
@@ -270,13 +270,13 @@ const Contact: React.FC = () => {
                                         cursor: 'pointer'
                                     }}
                                 >
-                                    <option value="">Select a Service</option>
-                                    <option value="Digital Strategy">Digital Strategy</option>
-                                    <option value="Social Media Marketing">Social Media Marketing</option>
-                                    <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
-                                    <option value="Performance Marketing">Performance Marketing</option>
-                                    <option value="Content & Engagement Marketing">Content & Engagement Marketing</option>
-                                    <option value="Website Design & Development">Website Design & Development</option>
+                                    <option value="" style={{ color: 'black' }}>Select a Service</option>
+                                    <option value="Digital Strategy" style={{ color: 'black' }}>Digital Strategy</option>
+                                    <option value="Social Media Marketing" style={{ color: 'black' }}>Social Media Marketing</option>
+                                    <option value="Search Engine Optimization (SEO)" style={{ color: 'black' }}>Search Engine Optimization (SEO)</option>
+                                    <option value="Performance Marketing" style={{ color: 'black' }}>Performance Marketing</option>
+                                    <option value="Content & Engagement Marketing" style={{ color: 'black' }}>Content & Engagement Marketing</option>
+                                    <option value="Website Design & Development" style={{ color: 'black' }}>Website Design & Development</option>
                                 </select>
                             </div>
 
