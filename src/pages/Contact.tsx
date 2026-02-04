@@ -271,10 +271,12 @@ const Contact: React.FC = () => {
                                     }}
                                 >
                                     <option value="">Select a Service</option>
-                                    <option value="Wedding Video Editing">Wedding Video Editing</option>
-                                    <option value="Social Media Content">Social Media Content</option>
-                                    <option value="Professional Training">Professional Training</option>
-                                    <option value="Freelance Partnership">Freelance Partnership</option>
+                                    <option value="Digital Strategy">Digital Strategy</option>
+                                    <option value="Social Media Marketing">Social Media Marketing</option>
+                                    <option value="Search Engine Optimization (SEO)">Search Engine Optimization (SEO)</option>
+                                    <option value="Performance Marketing">Performance Marketing</option>
+                                    <option value="Content & Engagement Marketing">Content & Engagement Marketing</option>
+                                    <option value="Website Design & Development">Website Design & Development</option>
                                 </select>
                             </div>
 
