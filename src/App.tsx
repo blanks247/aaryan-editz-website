@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Training from './pages/Training';
 import Freelancing from './pages/Freelancing';
-import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import { Instagram, Youtube, Linkedin } from 'lucide-react';
 import logoImg from './assets/logo.jpeg';
@@ -98,7 +97,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
 
-      {/* Partners Carousel */}
+      {/* Clients Carousel */}
       <div style={{
         paddingTop: '40px',
         paddingBottom: '20px',
@@ -108,7 +107,7 @@ const Footer: React.FC = () => (
         width: '100%',
         marginBottom: '20px'
       }}>
-        <h4 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '700', marginBottom: '32px' }}>Our Partners</h4>
+        <h4 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '700', marginBottom: '32px' }}>Our Clients</h4>
         
         <div className="partners-carousel-wrapper" style={{
           maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
@@ -180,7 +179,6 @@ const App: React.FC = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/training" element={<Training />} />
             <Route path="/freelancing" element={<Freelancing />} />
-            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
