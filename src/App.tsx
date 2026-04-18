@@ -9,6 +9,8 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import { Instagram, Youtube, Linkedin } from 'lucide-react';
 import logoImg from './assets/logo.jpeg';
+import raventraxLogo from './assets/raventrax.png';
+import cSuiteLogo from './assets/c_suite.png';
 
 // Scroll to top helper
 const ScrollToTop = () => {
@@ -96,6 +98,43 @@ const Footer: React.FC = () => (
         </div>
       </div>
 
+      {/* Partners Carousel */}
+      <div style={{
+        paddingTop: '40px',
+        paddingBottom: '20px',
+        borderTop: '1px solid var(--border)',
+        overflow: 'hidden',
+        position: 'relative',
+        width: '100%',
+        marginBottom: '20px'
+      }}>
+        <h4 style={{ textAlign: 'center', fontSize: '1.25rem', fontWeight: '700', marginBottom: '32px' }}>Our Partners</h4>
+        
+        <div className="partners-carousel-wrapper" style={{
+          maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)',
+        }}>
+          <div className="partners-carousel">
+            {[...Array(10)].map((_, arrayIndex) => (
+              <React.Fragment key={arrayIndex}>
+                <a href="https://raventrax.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
+                  <img src={raventraxLogo} alt="Raventrax" />
+                  <span>Raventrax</span>
+                </a>
+                <a href="https://new-c-suite.vercel.app/" target="_blank" rel="noopener noreferrer" className="partner-item">
+                  <img src={cSuiteLogo} alt="C-Suite" />
+                  <span>C-Suite</span>
+                </a>
+                <a href="https://freshhpick.com/" target="_blank" rel="noopener noreferrer" className="partner-item">
+                  <img src="https://www.google.com/s2/favicons?domain=freshhpick.com&sz=128" alt="Freshhpick" />
+                  <span>Freshhpick</span>
+                </a>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Bottom Bar */}
       <div style={{
         paddingTop: '32px',
@@ -166,6 +205,58 @@ const App: React.FC = () => {
         
         .page-transition {
           position: relative;
+        }
+        
+        .partners-carousel-wrapper {
+          width: 100%;
+          overflow: hidden;
+        }
+        
+        .partners-carousel {
+          display: flex;
+          width: max-content;
+          animation: scroll 15s linear infinite;
+        }
+        
+        .partners-carousel:hover {
+          animation-play-state: paused;
+        }
+        
+        .partner-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 16px 32px;
+          margin: 0 16px;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          color: var(--text-main);
+          min-width: max-content;
+        }
+        
+        .partner-item:hover {
+          background: rgba(255, 255, 255, 0.08);
+          transform: translateY(-2px);
+        }
+        
+        .partner-item img {
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+        }
+        
+        .partner-item span {
+          font-weight: 600;
+          font-size: 1.125rem;
+          letter-spacing: 0.5px;
+        }
+        
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-100% / 10)); }
         }
       `}</style>
     </Router>
